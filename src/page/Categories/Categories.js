@@ -4,7 +4,7 @@ import GlobalTable from "../../Components/GlobalTable/GlobalTable";
 
 function Categories() {
   return (
-    <div>
+    <div className="container">
       <GlobalModal />
       <GlobalTable />
     </div>

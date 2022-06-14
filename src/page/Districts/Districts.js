@@ -4,7 +4,7 @@ import GlobalTable from "../../Components/GlobalTable/GlobalTable";
 
 function Districts() {
   return (
-    <div>
+    <div className="container">
       <GlobalModal />
       <GlobalTable />
     </div>
