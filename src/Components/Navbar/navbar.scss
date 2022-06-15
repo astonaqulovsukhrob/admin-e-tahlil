@@ -4,9 +4,16 @@
   height: 50px;
   gap: 3rem;
   border-bottom: 1px solid #f0f0f0;
-  padding: 0 2rem ;
+  padding: 0 2rem;
   .site-navbar_logo + .site-navbar_menu {
     flex: 1;
+  }
+
+  .site-navbar_logo {
+    h2 {
+      font-weight: 550;
+      margin-top: 10px;
+    }
   }
 
   .site-navbar_menu {

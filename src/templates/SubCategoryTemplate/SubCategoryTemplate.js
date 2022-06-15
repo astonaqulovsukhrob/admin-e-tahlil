@@ -5,4 +5,5 @@ export const SubCategoryTemplate = {
   text: "Sub Категория",
   path: SUB_CATEGORIYA_PATH,
   type: CATEGORIYES_PAGE,
+  isOpenModal: false,
 };

@@ -1,0 +1,15 @@
+.site_form {
+  .site_form_button {
+    padding-top: 1.5rem;
+    text-align: center;
+    button:first-child {
+      margin-right: 12px;
+    }
+    button {
+      background: transparent;
+      border: 1px solid var(--main-border-color);
+      cursor: pointer;
+      padding: .2rem 3rem;
+    }
+  }
+}

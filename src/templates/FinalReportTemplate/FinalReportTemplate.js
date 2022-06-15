@@ -5,4 +5,5 @@ export const FinalReportTemplate = {
   text: "Натижави ҳисобот",
   path: FINAL_REPORT_PATH,
   type: CATEGORIYES_PAGE,
+  isOpenModal: false,
 };

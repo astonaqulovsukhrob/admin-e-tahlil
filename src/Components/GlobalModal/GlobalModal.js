@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Modal, Button, Popconfirm, Tooltip, message } from "antd";
 import { PlusOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import Form from "../Form/Form";
+import { setIsOpenModal } from "../../redux/stored_reducer";
 
 function GlobalModal() {
   const { currentPage } = useSelector((s) => s?.unsaved__reducer);
-  const [isModal, setIsModal] = useState(false);
   const [isRef, setisRef] = useState(false);
+  const dispatch = useDispatch();
 
   const handleSubmit = () => {};
 
@@ -25,15 +27,15 @@ function GlobalModal() {
   };
 
   const showModal = () => {
-    setIsModal(true);
+    dispatch(setIsOpenModal(true));
   };
 
   const handleEdit = () => {
-    setIsModal(true);
+    dispatch(setIsOpenModal(true));
   };
 
   const handleCancel = () => {
-    setIsModal(false);
+    dispatch(setIsOpenModal(true));
   };
 
   return (
@@ -88,12 +90,14 @@ function GlobalModal() {
       </Tooltip>
       <Modal
         title={currentPage?.text}
-        visible={isModal}
+        visible={currentPage?.isOpenModal}
         onCancel={handleCancel}
         footer=""
-        width={850}
+        width={currentPage?.modal?.width}
         style={{ marginTop: -60 }}
-      ></Modal>
+      >
+        <Form currentPage={currentPage} />
+      </Modal>
     </>
   );
 }
