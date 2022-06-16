@@ -6,4 +6,15 @@ export const FinalReportTemplate = {
   path: FINAL_REPORT_PATH,
   type: CATEGORIYES_PAGE,
   isOpenModal: false,
+  columns: [
+    {
+      title: "№",
+      dataIndex: "key",
+      // render: (key, text, index) => ++index,
+    },
+    {
+      title: "Шахар туман номи",
+      dataIndex: "name",
+    },
+  ],
 };

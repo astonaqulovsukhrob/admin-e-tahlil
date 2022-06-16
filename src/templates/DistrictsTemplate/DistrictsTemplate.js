@@ -7,6 +7,8 @@ export const DistrictsTemplate = {
   path: DISTRICT_PATH,
   type: DISTRICT_PAGE,
   isOpenModal: false,
+  optionName: "/users",
+  optionRegion: "/regions",
   modal: {
     width: 820,
   },
@@ -159,6 +161,33 @@ export const DistrictsTemplate = {
           ],
         },
       ],
+    },
+  ],
+  columns: [
+    {
+      title: "№",
+      dataIndex: "key",
+      // render: (key, text, index) => ++index,
+    },
+    {
+      title: "Туман",
+      dataIndex: "region_name",
+    },
+    {
+      title: "1-сектор ФИO",
+      dataIndex: "name_1",
+    },
+    {
+      title: "2-сектор ФИO",
+      dataIndex: "name_2",
+    },
+    {
+      title: "3-сектор ФИO",
+      dataIndex: "name_3",
+    },
+    {
+      title: "4-сектор ФИO",
+      dataIndex: "name_4",
     },
   ],
 };

@@ -1,4 +1,4 @@
-import { STRING } from "../../Components/constant/inputTypes";
+import { NUMBER, STRING } from "../../Components/constant/inputTypes";
 import { CATEGORIYES_PAGE } from "../../Components/constant/pageConstant";
 import { CATEGORIYA_PATH } from "../../Components/constant/pagePath";
 
@@ -7,30 +7,58 @@ export const CategoriyaTemplate = {
   path: CATEGORIYA_PATH,
   type: CATEGORIYES_PAGE,
   isOpenModal: false,
+  optionName: "/categories",
+  modal: {
+    width: 500,
+  },
   form: [
     {
       grid: {
-        colmuns: "repeat(10,1fr)",
-        row: "repeat(1,4fr)",
+        colmuns: "repeat(7, 1fr)",
+        row: "repeat(1, 4fr)",
       },
 
       inputs: [
         {
           type: STRING,
-          placeholder: "Парол",
+          name: "name",
+          placeholder: "Номи",
+          gridColumn: "1 / 6",
+        },
+        {
+          type: NUMBER,
           name: "password",
+          placeholder: "Такрорийлиги Рақам",
+          gridColumn: "6 / 8",
         },
         {
           type: STRING,
-          placeholder: "Парол",
           name: "password",
-        },
-        {
-          type: STRING,
-          placeholder: "Парол",
-          name: "password",
+          placeholder: "Изоҳ",
+          gridColumn: "1 / 8",
+          gridRow: "2 / 2",
         },
       ],
+    },
+  ],
+  columns: [
+    {
+      title: "№",
+      dataIndex: "key",
+      // render: (text, key, index) => ++index,
+    },
+    {
+      title: "Номи",
+      dataIndex: "name",
+    },
+
+    {
+      title: "Изоҳ",
+      dataIndex: "description",
+    },
+    {
+      title: "Такрорийлиги Рақам",
+      dataIndex: "repetition",
     },
   ],
 };

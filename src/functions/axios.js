@@ -1,7 +1,7 @@
 import axios from "axios";
 import { BaseUrl } from "../Baseurl";
 
-export default async (url, method = "GET", data = null) => {
+export default async (url, method = "GET", data = null, id = null) => {
   const token = localStorage.getItem("setToken");
   const path = id ? url + /id/ + id : url;
   if (url) {

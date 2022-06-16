@@ -7,6 +7,8 @@ export const stored_reducer = createSlice({
       users: [{}, {}, {}, {}],
     },
     currentPage: {},
+    loading: false,
+    rowId: 0,
   },
   reducers: {
     setCurrentPage: (state, { payload }) => {
@@ -18,9 +20,12 @@ export const stored_reducer = createSlice({
     setIsOpenModal: (state, { payload }) => {
       state.currentPage.isOpenModal = payload;
     },
+    setRowId: (state, { payload }) => {
+      state.rowId = payload;
+    },
   },
 });
 
-export const { setCurrentPage, setUser, setIsOpenModal } =
+export const { setCurrentPage, setUser, setIsOpenModal, setRowId } =
   stored_reducer.actions;
 export default stored_reducer.reducer;

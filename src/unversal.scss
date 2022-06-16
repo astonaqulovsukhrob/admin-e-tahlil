@@ -21,3 +21,8 @@ body {
   margin: auto;
   margin-top: 10px;
 }
+
+/* ------------------------------- Modal_style ------------------------------ */
+.ant-modal-mask {
+  backdrop-filter: blur(4px);
+}

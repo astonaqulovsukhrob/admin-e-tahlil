@@ -20,7 +20,7 @@
     a {
       text-decoration: none;
       margin-left: 0.8rem;
-      font-size: 1.05rem;
+      font-size: 0.9rem;
       outline: none;
       color: #bac8dc;
       font-weight: 500;
@@ -65,6 +65,15 @@
         background-color: #4447e2;
         animation: linear anim 0.3s;
       }
+    }
+  }
+  .icons {
+    div {
+      margin-right: 10px;
+    }
+    svg {
+      font-size: 1.2rem;
+      cursor: pointer;
     }
   }
 }
