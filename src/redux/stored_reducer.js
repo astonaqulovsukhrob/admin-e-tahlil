@@ -8,7 +8,7 @@ export const stored_reducer = createSlice({
     },
     currentPage: {},
     loading: false,
-    rowId: 0,
+  rowId: 0,
   },
   reducers: {
     setCurrentPage: (state, { payload }) => {

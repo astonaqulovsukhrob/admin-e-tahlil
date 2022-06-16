@@ -1,13 +1,18 @@
-import React from "react";
-import MainPage from "./page/MainPage/MainPage";
+import React, { lazy, Suspense } from "react";
 import { useSelector } from "react-redux";
 import { Route, Routes, Navigate } from "react-router-dom";
+import Loading from "./Components/Loading/Loading";
 import LoginPage from "./Components/LoginPage/LoginPage";
+const MainPage = lazy(() => import("./page/MainPage/MainPage"));
 
 function App() {
   const user = true;
   if (user) {
-    return <MainPage />;
+    return (
+      <Suspense fallback={<Loading />}>
+        <MainPage />
+      </Suspense>
+    );
   } else {
     return (
       <Routes>
