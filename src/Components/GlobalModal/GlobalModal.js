@@ -24,7 +24,7 @@ function GlobalModal() {
         width={currentPage?.modal?.width}
         style={{ marginTop: -60 }}
       >
-        <Form currentPage={currentPage} />
+        <Form />
       </Modal>
     </>
   );

@@ -7,7 +7,8 @@ export const CategoriyaTemplate = {
   path: CATEGORIYA_PATH,
   type: CATEGORIYES_PAGE,
   isOpenModal: false,
-  optionName: "/categories",
+  optionName: "/banks",
+  districtsFrom: false,
   modal: {
     width: 500,
   },
@@ -46,19 +47,23 @@ export const CategoriyaTemplate = {
       title: "№",
       dataIndex: "key",
       // render: (text, key, index) => ++index,
+      width: "20px",
     },
     {
       title: "Номи",
       dataIndex: "name",
+      width: "200px",
     },
 
     {
       title: "Изоҳ",
       dataIndex: "description",
+      width: "350px",
     },
     {
       title: "Такрорийлиги Рақам",
       dataIndex: "repetition",
+      width: "350px",
     },
   ],
 };

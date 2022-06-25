@@ -4,10 +4,16 @@ import { useSelector } from "react-redux";
 import "./table.scss";
 
 function GlobalTable() {
-  const { currentPage, loading } = useSelector((s) => s?.unsaved__reducer);
+  const { currentPage, loading, values, value } = useSelector(
+    (s) => s?.unsaved__reducer
+  );
   return (
     <div className="site_table">
-      <Table columns={currentPage?.columns} loading={!loading} />
+      <Table
+        columns={currentPage?.columns}
+        dataSource={values?.users || value}
+        loading={loading}
+      />
     </div>
   );
 }

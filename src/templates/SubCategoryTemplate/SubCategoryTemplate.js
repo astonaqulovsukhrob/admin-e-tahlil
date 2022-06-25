@@ -8,6 +8,7 @@ export const SubCategoryTemplate = {
   type: CATEGORIYES_PAGE,
   isOpenModal: false,
   optionName: "/subCategories",
+  districtsFrom: false,
   modal: {
     width: 500,
   },
@@ -22,10 +23,10 @@ export const SubCategoryTemplate = {
       inputs: [
         {
           type: SELECT,
-          name: "name",
+          name: "select",
           placeholder: "Категория",
           gridColumn: "1 / 4",
-          width: 140,
+          width: 200,
         },
         {
           type: STRING,
@@ -42,17 +43,21 @@ export const SubCategoryTemplate = {
       title: "№",
       dataIndex: "key",
       // render: (key, text, index) => ++index,
+      width: "10px",
     },
     {
       title: "Категория ",
       dataIndex: "category_name",
+      width: "250px",
     },
     {
       title: "Номи",
       dataIndex: "name",
+      width: "250px",
     },
     {
       dataIndex: "status",
+      width: "10px",
       render: (status) => {
         return (
           <div style={{ textAlign: "center" }}>

@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { AllPage } from "../../Components/grouping/grouping";
 import Navbar from "../../Components/Navbar/Navbar";

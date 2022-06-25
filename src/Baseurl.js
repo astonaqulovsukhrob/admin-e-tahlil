@@ -1,1 +1,2 @@
-export const BaseUrl = "https://api.e-tahlil.uz/api";
+export const Base = "";
+export const BaseUrl = Base + "api/v1";

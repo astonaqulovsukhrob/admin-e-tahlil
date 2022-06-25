@@ -1,3 +1,4 @@
+import { Popover } from "antd";
 import { NUMBER, SELECT, STRING } from "../../Components/constant/inputTypes";
 import { DISTRICT_PAGE } from "../../Components/constant/pageConstant";
 import { DISTRICT_PATH } from "../../Components/constant/pagePath";
@@ -7,8 +8,8 @@ export const DistrictsTemplate = {
   path: DISTRICT_PATH,
   type: DISTRICT_PAGE,
   isOpenModal: false,
-  optionName: "/users",
-  optionRegion: "/regions",
+  optionName: "/cities/10",
+  optionRegion: "/states",
   modal: {
     width: 820,
   },
@@ -26,6 +27,7 @@ export const DistrictsTemplate = {
               type: SELECT,
               name: "region_id",
               placeholder: "Туманлар",
+              label: "Туманлар",
               gridColumn: "1 / 4",
               gridRow: "1 / 1",
               width: 185,
@@ -35,6 +37,7 @@ export const DistrictsTemplate = {
               name: "name",
               type: STRING,
               placeholder: "1-сектор ФИO",
+              label: "1-сектор ФИO",
               gridColumn: "1 / 4",
               gridRow: "2 / 2",
             },
@@ -42,6 +45,7 @@ export const DistrictsTemplate = {
               type: STRING,
               name: "login",
               placeholder: "Логин",
+              label: "Логин",
               gridColumn: "4 / 7",
               gridRow: "2 / 2",
             },
@@ -49,6 +53,7 @@ export const DistrictsTemplate = {
               type: NUMBER,
               name: "password",
               placeholder: "Парол",
+              label: "Парол",
               gridColumn: "7 / 10",
               gridRow: "2 / 2",
             },
@@ -56,6 +61,7 @@ export const DistrictsTemplate = {
               type: NUMBER,
               name: "phone_number",
               placeholder: "Телефон номер",
+              label: "Телефон номер",
               gridColumn: "10 / 13",
               gridRow: "2 / 2",
             },
@@ -168,6 +174,7 @@ export const DistrictsTemplate = {
       title: "№",
       dataIndex: "key",
       // render: (key, text, index) => ++index,
+      width: "20px",
     },
     {
       title: "Туман",
