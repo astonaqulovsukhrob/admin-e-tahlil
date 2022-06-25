@@ -47,6 +47,7 @@ function ChangePassword() {
             // prefix={<img src={icon1} />}
             placeholder="Эски пароль"
           />
+          <label className="special_label">Эски пароль</label>
         </Form.Item>
         <Form.Item
           rules={[
@@ -68,6 +69,7 @@ function ChangePassword() {
             type="password"
             placeholder="Янги пароль"
           />
+          <label className="special_label">Янги пароль</label>
         </Form.Item>
         <Form.Item shouldUpdate wrapperCol={{ offset: 8, span: 16 }}>
           {() => (

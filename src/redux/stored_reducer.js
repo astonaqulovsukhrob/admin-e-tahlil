@@ -8,11 +8,12 @@ export const stored_reducer = createSlice({
     },
     value: [],
     currentPage: {},
+    user: [],
     loading: false,
     rowId: 0,
   },
   reducers: {
-    setUser: (state, { payload }) => {
+    setUsers: (state, { payload }) => {
       state.values.users = payload;
     },
     setValue: (state, { payload }) => {
@@ -20,6 +21,9 @@ export const stored_reducer = createSlice({
     },
     setCurrentPage: (state, { payload }) => {
       state.currentPage = payload;
+    },
+    setUser: (state, { payload }) => {
+      state.user = payload;
     },
     setIsOpenModal: (state, { payload }) => {
       state.currentPage.isOpenModal = payload;
@@ -37,9 +41,10 @@ export const stored_reducer = createSlice({
 });
 
 export const {
-  setUser,
+  setUsers,
   setValue,
   setCurrentPage,
+  setUser,
   setIsOpenModal,
   startLoading,
   stopLoading,

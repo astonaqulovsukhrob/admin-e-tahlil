@@ -1,13 +1,15 @@
 import React, { lazy, Suspense } from "react";
 import { useSelector } from "react-redux";
 import { Route, Routes, Navigate } from "react-router-dom";
-import Loading from "./Components/Loading/Loading";
-import LoginPage from "./Components/LoginPage/LoginPage";
+const Loading = lazy(() => import("./Components/Loading/Loading"));
+const LoginPage = lazy(() => import("./Components/LoginPage/LoginPage"));
 const MainPage = lazy(() => import("./page/MainPage/MainPage"));
 
 function App() {
-  const user = true;
-  if (user) {
+  const { user } = useSelector((s) => s?.unsaved__reducer);
+
+  // const user = true;
+  if (user?.password == "admin") {
     return (
       <Suspense fallback={<Loading />}>
         <MainPage />
@@ -16,8 +18,22 @@ function App() {
   } else {
     return (
       <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="*" element={<Navigate to={"/"} />} />
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<Loading />}>
+              <LoginPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={<Loading />}>
+              <Navigate to={"/"} />
+            </Suspense>
+          }
+        />
       </Routes>
     );
   }

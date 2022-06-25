@@ -1,7 +1,7 @@
 import { Input, Select } from "antd";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setUser, setValue } from "../../redux/stored_reducer";
+import { setUsers, setValue } from "../../redux/stored_reducer";
 import { NUMBER, STRING, SELECT } from "../constant/inputTypes";
 import "../inputStyle/input.scss";
 const { Option } = Select;
@@ -26,8 +26,6 @@ const ModalInputs = (props) => {
     !!value[name] || (!!values?.users && !!values?.users[name])
   );
 
-  console.log(value[name]);
-
   const dispatch = useDispatch();
   let districts_From = currentPage?.districtsFrom;
 
@@ -37,7 +35,7 @@ const ModalInputs = (props) => {
       let a = values?.users.find((list, i) => i === tartib);
       let newVelues = [...values?.users];
       newVelues.splice(newVelues.indexOf(a), 1, { ...a, ...e });
-      dispatch(setUser(newVelues));
+      dispatch(setUsers(newVelues));
     } else {
       dispatch(setValue({ ...value, ...e }));
     }

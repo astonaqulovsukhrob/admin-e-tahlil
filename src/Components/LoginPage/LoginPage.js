@@ -5,16 +5,21 @@ import login from "../../assates/images/login.svg";
 import password from "../../assates/images/password.svg";
 import vector from "../../assates/images/Vector.png";
 import "./login.scss";
+import { setUser, startLoading, stopLoading } from "../../redux/stored_reducer";
 
 function LoginPage() {
-  const loading = useSelector((state) => state.allData?.loading);
+  const { loading } = useSelector((s) => s?.unsaved__reducer);
   const [form] = Form.useForm();
   const [, forceUpdate] = useState({});
   const dispatch = useDispatch();
   useEffect(() => {
     forceUpdate({});
   }, []);
-  const onFinish = (values) => {};
+  const onFinish = (values) => {
+    dispatch(startLoading());
+    dispatch(setUser({ ...values }));
+    dispatch(stopLoading());
+  };
 
   return (
     <div className="header-logout main">
@@ -56,9 +61,8 @@ function LoginPage() {
               },
             ]}
           >
-            <Input
+            <Input.Password
               prefix={<img src={password} />}
-              type="password"
               placeholder="Пароль"
             />
           </Form.Item>
