@@ -35,7 +35,7 @@ function Navbar() {
       GET(currentPage?.optionName).then((res) => {
         console.log(res);
         if (res) {
-          dispatch(stopLoading());
+          // dispatch(stopLoading());
         }
       });
     }

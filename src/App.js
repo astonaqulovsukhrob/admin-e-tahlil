@@ -6,10 +6,9 @@ const LoginPage = lazy(() => import("./Components/LoginPage/LoginPage"));
 const MainPage = lazy(() => import("./page/MainPage/MainPage"));
 
 function App() {
-  const { user } = useSelector((s) => s?.unsaved__reducer);
-
-  // const user = true;
-  if (user?.password == "admin") {
+  // const { user } = useSelector((s) => s?.unsaved__reducer);
+  const user = true;
+  if (user) {
     return (
       <Suspense fallback={<Loading />}>
         <MainPage />

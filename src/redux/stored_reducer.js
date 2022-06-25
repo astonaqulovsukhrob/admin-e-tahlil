@@ -4,7 +4,32 @@ export const stored_reducer = createSlice({
   name: "admin",
   initialState: {
     values: {
-      users: [],
+      users: [
+        // {
+        //   id: "1",
+        //   region_name: "Fergana",
+        //   name_1: "sukhrob",
+        //   name_2: "sukhrob",
+        //   name_3: "sukhrob",
+        //   name_4: "sukhrob",
+        // },
+        // {
+        //   id: "2",
+        //   region_name: "Fergana",
+        //   name_1: "sukhrob",
+        //   name_2: "sukhrob",
+        //   name_3: "sukhrob",
+        //   name_4: "sukhrob",
+        // },
+        // {
+        //   id: "3",
+        //   region_name: "Fergana",
+        //   name_1: "sukhrob",
+        //   name_2: "sukhrob",
+        //   name_3: "sukhrob",
+        //   name_4: "sukhrob",
+        // },
+      ],
     },
     value: [],
     currentPage: {},

@@ -18,7 +18,7 @@ function LoginPage() {
   const onFinish = (values) => {
     dispatch(startLoading());
     dispatch(setUser({ ...values }));
-    dispatch(stopLoading());
+    // dispatch(stopLoading());
   };
 
   return (

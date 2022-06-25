@@ -1,7 +1,7 @@
 import React from "react";
 import ModalInputs from "../GlobalModal/ModalInputs";
 import { useDispatch, useSelector } from "react-redux";
-import { setIsOpenModal } from "../../redux/stored_reducer";
+import { setIsOpenModal, setRowId } from "../../redux/stored_reducer";
 import "./form.scss";
 
 function Form() {
@@ -12,6 +12,7 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(setIsOpenModal(false));
+    dispatch(setRowId());
   };
 
   return (

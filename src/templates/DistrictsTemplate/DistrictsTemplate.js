@@ -172,7 +172,7 @@ export const DistrictsTemplate = {
   columns: [
     {
       title: "№",
-      dataIndex: "key",
+      dataIndex: "id",
       // render: (key, text, index) => ++index,
       width: "20px",
     },

@@ -16,13 +16,13 @@ function Districts() {
       GET(currentPage?.optionName).then((res) => {
         console.log(res);
         if (res) {
-          dispatch(stopLoading());
+          // dispatch(stopLoading());
         }
       });
       GET(currentPage?.optionRegion).then((res) => {
         console.log(res);
         if (res) {
-          dispatch(stopLoading());
+          // dispatch(stopLoading());
         }
       });
     }

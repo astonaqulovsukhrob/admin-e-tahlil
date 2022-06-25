@@ -52,7 +52,7 @@ function ModalButton() {
             cancelText="Орқага"
             onConfirm={onConfirm}
             onCancel={onCancel}
-        >
+          >
             <Button type="primary" onClick={handleEdit} style={{ margin: 8 }}>
               <EditOutlined /> Ўзгартириш
             </Button>
@@ -62,7 +62,7 @@ function ModalButton() {
       <Tooltip placement="top" title="Ўчириш">
         <Button type="danger">
           <Popconfirm
-            title={rowId ? "Ўчирасизми ?" : "1 та қаторни белгилнг!"} 
+            title={rowId ? "Ўчирасизми ?" : "1 та қаторни белгилнг!"}
             okText="Ҳа"
             cancelText="Орқага"
             onConfirm={onConfirm}
