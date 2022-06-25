@@ -9,6 +9,8 @@
       background: #001529 !important;
       color: white !important;
       font-size: 0.9rem !important;
+      text-align: center;
+      padding: 0.45rem !important;
     }
     .ant-table-tbody > tr > td:first-child {
       border-left: 1px solid #000000 !important;
@@ -18,15 +20,32 @@
       border-right: 1px solid #000000 !important;
       border-bottom: 1px solid #000000 !important;
     }
-    .ant-table-thead > tr > th,
+
     .ant-table-tbody > tr > td,
     .ant-table tfoot > tr > th,
     .ant-table tfoot > tr > td {
-      padding: 6px 14px !important;
+      padding: 0 !important;
     }
 
     .ant-table-tbody > tr.ant-table-row:hover > td {
       background: none !important;
+    }
+  }
+  .main-table {
+    .ant-table {
+      .ant-table-container {
+        .ant-table-body {
+          .ant-table-row.ant-table-row {
+            max-height: 30px !important;
+            height: 30px !important;
+            .ant-table-cell.ant-table-cell {
+              text-align: center;
+              padding: 2px 4px !important;
+              max-height: 30px !important;
+            }
+          }
+        }
+      }
     }
   }
 }

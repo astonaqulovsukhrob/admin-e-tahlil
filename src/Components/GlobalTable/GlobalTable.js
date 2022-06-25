@@ -30,12 +30,17 @@ function GlobalTable() {
       <Table
         columns={currentPage?.columns}
         dataSource={values?.users || value}
-        loading={loading}
+        // loading={loading}
+        className="main-table"
         onRow={onClickRow}
         rowClassName={setRowClassName}
+        scroll={{
+          y: 450,
+        }}
         pagination={{
           position: ["bottomCenter"],
           showSizeChanger: true,
+          // defaultPageSize: 13,
           pageSizeOptions: ["10", "20", "30"],
         }}
       />

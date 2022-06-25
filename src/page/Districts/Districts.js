@@ -11,8 +11,8 @@ function Districts() {
 
   useEffect(() => {
     let url = currentPage?.optionName;
+    dispatch(startLoading());
     if (url) {
-      dispatch(startLoading());
       GET(currentPage?.optionName).then((res) => {
         console.log(res);
         if (res) {

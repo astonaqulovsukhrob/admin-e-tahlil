@@ -174,7 +174,7 @@ export const DistrictsTemplate = {
       title: "№",
       dataIndex: "id",
       // render: (key, text, index) => ++index,
-      width: "20px",
+      width: "40px",
     },
     {
       title: "Туман",
